@@ -1,36 +1,67 @@
 import { themes } from "mdx-deck";
-import Chart from "./chart";
-import Joke from "./joke";
-
-export const theme = themes.default;
+import Chart from "./components/Chart";
+import Joke from "./components/Joke";
+import Link from "./components/Link";
+let jokesModule = require("./jokes");
+const jokes = jokesModule.jokes;
+export const theme = themes.dark;
 
 # 👴
 
-## Welcome to the Klenk Family
+# Welcome to the Klenk Family
 
-## Father's Day Zoom
+# Father's Day Zoom
 
 ---
 
-# People who find dad jokes funny
+## People who find dad jokes funny
 
 <Chart />
 
 ---
 
-<Joke
-  question="Why did the chicken cross the road"
-  answer="To get to the other side"
-/>
+<Joke {...jokes[0]} />
 
 ---
 
-## joke 2
+<Joke {...jokes[1]} />
 
 ---
 
-## how to vote
+<Joke {...jokes[2]} />
 
 ---
 
-# End
+<Joke {...jokes[3]} />
+
+---
+
+<Joke {...jokes[4]} />
+
+---
+
+<Joke {...jokes[5]} />
+
+---
+
+<Joke {...jokes[6]} />
+
+---
+
+<Joke {...jokes[7]} />
+
+---
+
+<Joke {...jokes[8]} />
+
+---
+
+# Vote for your favorite here
+
+<Link url="https://forms.gle/94JkRGqkaVoQ9N5Y8" />
+
+### Or check your email 📫
+
+---
+
+# Fin
